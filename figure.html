@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피규어</title>
+    <script>
+        const max = 4;
+        let count = 1;
+
+        function roll() {
+    count = count % max;
+    count++;
+
+    const tag = document.querySelector("#figure");
+    const counter = "0" + count;
+    tag.src = "figure/figure" + counter.slice(-2) + ".png"
+
+}
+        window.onload = function() {
+            setInterval(roll, 450);
+
+        }
+    </script>
+</head>
+<body>
+    <img id= "figure" width="1000" height="1000" src="figure/figure01.png">
+</body>
+</html>
